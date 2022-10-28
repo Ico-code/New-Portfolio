@@ -1,0 +1,28 @@
+* {
+  color: white;
+}
+img {
+  max-width: 130%;
+  transition: max-width 0.2s ease;
+}
+.containerForFloatingText {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  max-height: 200px;
+}
+.floatingText {
+  background-color: rgba(1, 1, 1,0.7);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  color: black;
+  padding: 10px;
+}
+.portfolioItem:hover > a > figure.containerForFloatingText > img {
+  max-width: 150%;
+}

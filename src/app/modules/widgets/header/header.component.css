@@ -1,0 +1,49 @@
+header nav {
+  align-content: space-between;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: rgb(0, 186, 243);
+}
+img {
+  max-width: 100%;
+}
+figure {
+  max-width: 75px;
+  min-width: 75px;
+}
+li a {
+  font-size: 1.2em;
+}
+#sideNavContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sideNavContainer fa-icon{
+  font-size: 2em;
+}
+#sideNav {
+  position: absolute;
+  top: 62px;
+  right: 0px;
+  width: 100vw;
+  background-color: slategray;
+}
+#sideNav > li{
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+#sideNav > li a:hover, #sideNav > li:hover{
+  color: rgb(94, 94, 94);
+  border-bottom-color: rgb(94, 94, 94);
+
+}
