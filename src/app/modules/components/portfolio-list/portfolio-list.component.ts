@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 interface portfolioList {
   id: number,
@@ -15,7 +14,6 @@ interface portfolioList {
 })
 export class PortfolioListComponent implements OnInit {
 
-  faMagnifyingGlass = faMagnifyingGlass;
 
   portfolioItems: Array<portfolioList> = [
     {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },

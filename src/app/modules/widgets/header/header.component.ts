@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   faBars = faBars;
   innerWidth: number = window.innerWidth;
   mobileView: boolean = true;
+  menuOpen:boolean = false;
 
   checkForMobileView() {
     if(this.innerWidth < 768){
@@ -19,11 +20,18 @@ export class HeaderComponent implements OnInit {
       this.mobileView = false;
     }
   }
-
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.innerWidth = window.innerWidth;
+    this.toggleMenu(false)
     this.checkForMobileView()
+  }
+
+  toggleMenu(state?:boolean) {
+    if(state){
+      this.menuOpen = state;
+    }
+    this.menuOpen = !this.menuOpen;
   }
 
   constructor() {

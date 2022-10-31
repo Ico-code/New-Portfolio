@@ -12,8 +12,7 @@
 }
 section#AboutMe div.background-shade {
   max-width: 100%;
-  padding: 10px;
-  padding-bottom: 30px;
+  padding: 35px 10px;
   min-height: inherit;
 }
 section#AboutMe div.background-shade div.container div {
