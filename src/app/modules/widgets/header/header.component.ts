@@ -10,36 +10,32 @@ export class HeaderComponent implements OnInit {
   faBars = faBars;
   innerWidth: number = window.innerWidth;
   mobileView: boolean = true;
-  menuOpen:boolean = false;
+  menuOpen: boolean = false;
 
   checkForMobileView() {
-    if(this.innerWidth < 768){
+    if (this.innerWidth < 768) {
       this.mobileView = true;
-    }
-    else {
+    } else {
       this.mobileView = false;
+      this.menuOpen = false;
     }
   }
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.innerWidth = window.innerWidth;
-    this.toggleMenu(false)
-    this.checkForMobileView()
+    this.checkForMobileView();
   }
 
-  toggleMenu(state?:boolean) {
-    if(state){
+  toggleMenu(state?: boolean) {
+    if (state) {
       this.menuOpen = state;
+      return;
     }
     this.menuOpen = !this.menuOpen;
   }
-
   constructor() {
-    this.checkForMobileView()
+    this.checkForMobileView();
   }
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 }

@@ -25,3 +25,12 @@ label {
 form {
   padding: 0px;
 }
+#submitButton {
+  max-width: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+  background-color: deepskyblue;
+  color: white;
+  border: none;
+}

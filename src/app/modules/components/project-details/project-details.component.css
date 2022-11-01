@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+}
+.imagePreview {
+  max-width: 70px;
+  padding: 10px;
+  padding-left: 0px;
+}
+.primary-bg {
+  background-color: rgb(130, 104, 244);
+}

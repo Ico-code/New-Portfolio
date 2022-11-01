@@ -1,3 +1,9 @@
-section {
-  min-height: 70vh;
+#contentBox {
+  height: 65vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.primary-bg {
+  background-color: rgb(76, 27, 126);
 }

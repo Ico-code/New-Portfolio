@@ -1,16 +1,13 @@
-#ContactForm {
-
-}
-#Portfolio {
-
-}
 #AboutMe {
-  background-image: url(../../../../assets/images/default-placeholder.png);
+  background-color: rgb(101, 25, 176);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
   padding: 0px;
+}
+#skills {
+  background-color: rgb(102, 60, 218);
 }
 section#AboutMe div.background-shade {
   max-width: 100%;
@@ -32,7 +29,6 @@ figure.myPicture {
   max-width: 100%;
   max-height: 550px;
 }
-
 figure {
   display: flex;
   justify-content: center;
@@ -40,9 +36,6 @@ figure {
   overflow: hidden;
   max-width: 100%;
   max-height: 100px;
-}
-.background-shade {
-  box-shadow: inset 1px 1px 10px 1000px rgba(0, 0, 0,0.75);
 }
 img {
   max-width: 100%;

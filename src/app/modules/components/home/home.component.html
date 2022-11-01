@@ -1,6 +1,5 @@
 <section id="AboutMe">
-  <div class="background-shade">
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
         <div class="col-md-6 d-flex flex-column justify-content-center mb-4">
           <h2 class="d-block text-white">About Me</h2>
@@ -25,19 +24,26 @@
           </figure>
         </div>
       </div>
-    </div>
   </div>
 </section>
-<div class="bg-dark">
-  <section id="Portfolio" class="p-4 bg-opacity-50 bg-secondary">
-    <h2 class="text-white">Portfolio</h2>
-    <p class="text-white">This part of the page includes some of my favorite projects, from my portfolio.</p><a href="/About" class="learnMoreButton p-2 text-white">Learn more</a>
-    <app-portfolio-list></app-portfolio-list>
+<div>
+  <section id="Portfolio" class="p-4">
+    <div class="container">
+      <h2 class="text-white">Portfolio</h2>
+      <p class="text-white">
+        This part of the page includes some of my favorite projects, from my
+        portfolio.
+      </p>
+      <a href="/About" class="learnMoreButton p-2 text-white">Learn more</a>
+      <app-portfolio-list></app-portfolio-list>
+    </div>
   </section>
-  <section id="ContactForm" class="bg-dark p-4">
+  <section id="ContactForm" class="p-4">
     <div class="container">
       <h2 class="text-white">Contact me</h2>
-      <p class="text-white">You can use the following form to contact me via email.</p>
+      <p class="text-white">
+        You can use the following form to contact me via email.
+      </p>
       <app-contact-form></app-contact-form>
     </div>
   </section>

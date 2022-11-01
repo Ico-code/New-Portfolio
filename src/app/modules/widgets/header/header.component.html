@@ -1,9 +1,12 @@
-<header class="bg-primary">
+<header class="primary-bg">
   <nav>
     <ul class="mb-0 d-flex flex-row align-items-center">
       <li class="me-auto">
         <figure class="ms-4 mb-0" id="logo">
-          <a href="/Home" class="d-flex justify-content-center align-items-center">
+          <a
+            href="/Home"
+            class="d-flex justify-content-center align-items-center"
+          >
             <img
               src="../../../../assets/images/default-placeholder.png"
               alt="Logo"
@@ -33,7 +36,7 @@
         class="position-relative m-2 me-3 px-2"
         id="sideNavContainer"
         (click)="toggleMenu()"
-        [ngClass]="menuOpen ? 'hoverWhite':''"
+        [ngClass]="menuOpen ? 'hoverWhite' : ''"
       >
         <fa-icon [icon]="faBars"></fa-icon>
       </div>
@@ -42,21 +45,22 @@
 </header>
 
 <ul
-id="sideNav"
-class="mb-0 d-flex flex-column justify-content-center align-items-center"
-*ngIf="mobileView == true"
-[ngStyle]="menuOpen ? { right: '0px', width:'100vw'} : { left:'0px', width:'0vw'}"
+  id="sideNav"
+  class="mb-0 d-flex flex-column justify-content-center align-items-center"
+  [ngStyle]="
+    menuOpen ? { right: '0px', width: '100vw' } : { left: '0px', width: '0vw' }
+  "
 >
-<li>
-  <a href="/Home">Home</a>
-</li>
-<li>
-  <a href="/Portfolio">Portfolio</a>
-</li>
-<li>
-  <a href="/About">About</a>
-</li>
-<li>
-  <a href="/Contact">Contact</a>
-</li>
+  <li>
+    <a href="/Home">Home</a>
+  </li>
+  <li>
+    <a href="/Portfolio">Portfolio</a>
+  </li>
+  <li>
+    <a href="/About">About</a>
+  </li>
+  <li>
+    <a href="/Contact">Contact</a>
+  </li>
 </ul>
