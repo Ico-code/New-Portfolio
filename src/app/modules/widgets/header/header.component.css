@@ -4,7 +4,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.15s ease;
 }
 a:hover {
@@ -61,8 +61,5 @@ li a {
 #sideNav > li:hover, #sideNav > li:hover a, #sideNav li a:hover{
   color: rgb(255, 255, 255);
   border-bottom-color: rgb(255, 255, 255);
-  background-color: rgb(145, 67, 255);
-}
-.primary-bg {
   background-color: rgb(145, 67, 255);
 }

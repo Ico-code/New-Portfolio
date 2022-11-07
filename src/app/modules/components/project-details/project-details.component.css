@@ -4,12 +4,24 @@ img {
 ul {
   list-style: none;
   padding: 0px;
+  margin: 0px;
 }
 .imagePreview {
   max-width: 70px;
   padding: 10px;
   padding-left: 0px;
 }
-.primary-bg {
-  background-color: rgb(130, 104, 244);
+.icon {
+  max-width: 4em;
+  min-width: 4em;
+}
+#tagContainer li{
+  margin-left: 10px;
+}
+#imageContainer {
+  max-height: 500px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
 }

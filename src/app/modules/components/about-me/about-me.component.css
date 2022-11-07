@@ -1,25 +1,9 @@
 #AboutMe {
-  background-color: rgb(101, 25, 176);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
   padding: 0px;
-}
-#skills {
-  background-color: rgb(102, 60, 218);
-}
-section#AboutMe div.background-shade {
-  max-width: 100%;
-  padding: 10px;
-  padding-bottom: 30px;
-  min-height: inherit;
-}
-section#AboutMe div.background-shade div.container div {
-  min-height: inherit;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 figure.myPicture {
   display: flex;

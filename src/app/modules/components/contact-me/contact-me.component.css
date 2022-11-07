@@ -1,9 +1,6 @@
 #contentBox {
-  height: 65vh;
+  height: 70vh;
   display: grid;
   justify-content: center;
   align-content: center;
-}
-.primary-bg {
-  background-color: rgb(76, 27, 126);
 }

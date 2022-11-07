@@ -30,6 +30,6 @@ ul p {
   background-color: rgb(69, 113, 157);
   cursor: pointer;
 }
-.primary-bg {
-  background-color: rgb(121, 63, 255);
+#portfolio {
+  height: 75vh;
 }

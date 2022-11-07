@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.contentContainer {
+  max-width: 1020px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.primary-bg {
+  background-color: rgb(127, 72, 255);
+}
+.bg-purple {
+  background-color: rgb(104, 0, 215);
+}
+.bg-blue {
+  background-color: rgb(92, 102, 255);
+}

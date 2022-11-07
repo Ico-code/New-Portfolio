@@ -8,11 +8,11 @@ import { ContactMeComponent } from './modules/components/contact-me/contact-me.c
 import { ProjectDetailsComponent } from './modules/components/project-details/project-details.component';
 
 const routes: Routes = [
-  {path:'Home',component:HomeComponent},
-  {path:'Portfolio',component:PortfolioComponent},
-  {path:'Project',component:ProjectDetailsComponent},
-  {path:'About',component:AboutMeComponent},
-  {path:'Contact',component:ContactMeComponent},
+  {path:'Home',title:'Home',component:HomeComponent},
+  {path:'Portfolio',title:'Portfolio',component:PortfolioComponent},
+  {path:'Project',title:'Project',component:ProjectDetailsComponent},
+  {path:'About',title:'About',component:AboutMeComponent},
+  {path:'Contact',title:'Contact',component:ContactMeComponent},
   {path:'**',redirectTo:'/Home',pathMatch: 'full'}
 ];
 
