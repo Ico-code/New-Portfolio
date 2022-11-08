@@ -1,5 +1,5 @@
 <div class="mb-4 portfolioItem">
-  <a href="/Project/{{projectData.id}}">
+  <a [routerLink]="['/Project/',projectData.id]">
     <figure class="containerForFloatingText">
       <img src="{{ projectData.img }}" alt="Test" />
       <div class="floatingText">

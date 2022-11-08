@@ -1,4 +1,4 @@
-<section id="AboutMe" class="bg-purple">
+<section id="AboutMe" class="bg-purple px-3">
     <div class="contentContainer py-5">
       <div class="row">
         <div class="col-md-6 d-flex flex-column justify-content-center mb-4">
@@ -34,8 +34,8 @@
         This part of the page includes some of my favorite projects, from my
         portfolio.
       </p>
-      <a href="/About" class="learnMoreButton p-2 text-white">Learn more</a>
-      <app-portfolio-list></app-portfolio-list>
+      <a href="/Portfolio" class="learnMoreButton p-2 text-white">Learn more</a>
+      <app-portfolio-list [portfolioItems]="portfolioItems"></app-portfolio-list>
     </div>
   </section>
   <section id="ContactForm" class="p-4 bg-purple">

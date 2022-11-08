@@ -1,12 +1,5 @@
+import { portfolioInterface } from './../../../services/portfolioListInterface';
 import { Component, OnInit, Input } from '@angular/core';
-
-interface portfolioList {
-  id: number,
-  img: string,
-  title: string,
-  description: string,
-};
-
 
 @Component({
   selector: 'app-portfolio-list-item',
@@ -15,8 +8,7 @@ interface portfolioList {
 })
 export class PortfolioListItemComponent implements OnInit {
 
-  @Input() projectData:portfolioList = {id:0, img:'', title: '', description: ''};
-  @Input() maxWidth: string = '';
+  @Input() projectData:portfolioInterface = {id:0, img:'', title: '', description: ''};
 
   constructor() {}
 

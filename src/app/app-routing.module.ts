@@ -10,7 +10,7 @@ import { ProjectDetailsComponent } from './modules/components/project-details/pr
 const routes: Routes = [
   {path:'Home',title:'Home',component:HomeComponent},
   {path:'Portfolio',title:'Portfolio',component:PortfolioComponent},
-  {path:'Project',title:'Project',component:ProjectDetailsComponent},
+  {path:'Project/:id',title:'Project',component:ProjectDetailsComponent},
   {path:'About',title:'About',component:AboutMeComponent},
   {path:'Contact',title:'Contact',component:ContactMeComponent},
   {path:'**',redirectTo:'/Home',pathMatch: 'full'}

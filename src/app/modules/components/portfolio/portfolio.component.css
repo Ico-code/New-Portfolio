@@ -31,5 +31,5 @@ ul p {
   cursor: pointer;
 }
 #portfolio {
-  height: 75vh;
+  min-height: 75vh;
 }

@@ -15,13 +15,11 @@ ul {
   max-width: 4em;
   min-width: 4em;
 }
-#tagContainer li{
-  margin-left: 10px;
-}
 #imageContainer {
   max-height: 500px;
   justify-content: center;
   align-items: center;
   display: flex;
   overflow: hidden;
+  background-color: white;
 }

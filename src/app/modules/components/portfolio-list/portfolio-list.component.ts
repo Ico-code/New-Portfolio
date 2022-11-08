@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-interface portfolioList {
-  id: number,
-  img: string,
-  title: string,
-  description: string,
-};
+import { Component, OnInit, Input } from '@angular/core';
+import { portfolioInterface } from '../../services/portfolioListInterface';
 
 @Component({
   selector: 'app-portfolio-list',
@@ -14,15 +8,7 @@ interface portfolioList {
 })
 export class PortfolioListComponent implements OnInit {
 
-
-  portfolioItems: Array<portfolioList> = [
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-    {id:0, img:'../../../../../assets/images/default-placeholder.png', title:'IDK',description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk' },
-];
+  @Input() portfolioItems?: Array<portfolioInterface>;
 
   constructor() { }
 

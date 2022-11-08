@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { PortfolioService } from '../../services/portfolio-service.service';
+import { portfolioInterface } from '../../services/portfolioListInterface';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,7 +12,9 @@ export class PortfolioComponent implements OnInit {
 
   faMagnifyingGlass = faMagnifyingGlass;
 
-  constructor() { }
+  portfolioItems?: Array<portfolioInterface> = this.portfolioService.getAllPortfolioItems();
+
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
   }
