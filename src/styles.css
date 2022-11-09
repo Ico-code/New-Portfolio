@@ -13,3 +13,9 @@
 .bg-blue {
   background-color: rgb(92, 102, 255);
 }
+.bg-selected {
+  background-color: rgb(146, 83, 255);
+}
+.bg-light-purple {
+  background-color: rgb(127, 16, 255);
+}

@@ -30,7 +30,13 @@ form {
   border-radius: 10px;
   padding: 10px;
   font-weight: 500;
-  background-color: deepskyblue;
+  background-color: rgb(0, 187, 255);;
   color: white;
+  transition: 0.2s ease;
   border: none;
+  max-width: fit-content;
+}
+#submitButton:hover {
+  background-color: rgb(4, 160, 216);
+  color: rgb(255, 204, 0);
 }

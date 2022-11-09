@@ -1,64 +1,39 @@
 <article class="bg-purple">
   <section class="p-3 contentContainer">
     <div class="mb-4">
-        <h1>Title</h1>
-        <div class="border border-primary p-2">
-          <p class="mb-0">
-            Portfolio for showcasing my different projects
-          </p>
-        </div>
-        <div class="border border-primary p-2">
-          <p class="mb-0">
-            Date: 9.10.2022
-          </p>
-        </div>
-        <div>
-          <button class="bg-success my-2">
-            Visit the website
-          </button>
-      </div>
-        <figure class="mb-0" id="imageContainer">
-          <img
-            src="../../../../assets/images/default-placeholder.png"
-            alt="Project image"
-          />
-        </figure>
+      <h1 class="text-white">{{portfolioData.title}}</h1>
+      <p class="mb-0 text-white p-1">
+        Portfolio for showcasing my different projects
+      </p>
+      <p class="mb-3 text-white p-1">Date: 9.10.2022</p>
+      <button class="my-2 visitWebsiteButton mb-4">
+        Visit The Website
+      </button>
+      <figure class="mb-0" id="imageContainer">
+        <img
+          src="../../../../assets/images/default-placeholder.png"
+          alt="Project image"
+        />
+      </figure>
     </div>
-    <div>
+    <div class="bg-light-purple p-3 my-5" id="descriptionArea">
       <ul class="d-flex mb-0">
-        <li class="mx-1 p-1 bg-white">
+        <li class="mx-1 p-2 text-white descriptionAreaTabs" [ngClass]="activeContentArea == 'About' ? 'bg-selected': 'bg-light-purple'" (click)="changeSelectedContentArea('About')">
           About
         </li>
-        <li class="mx-1 p-1 bg-white">
+        <li class="mx-1 p-2 text-white descriptionAreaTabs" [ngClass]="activeContentArea == 'Technologies' ? 'bg-selected': 'bg-light-purple'" (click)="changeSelectedContentArea('Technologies')">
           Technologies
         </li>
       </ul>
-      <div class="bg-primary p-3">
-        <div>
-          <p>Description</p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas soluta quam
-            voluptatum nesciunt, perferendis quia omnis ad enim distinctio, non itaque
-            dolorum porro placeat. Facere sunt tempore, ratione aut obcaecati
-            accusamus deleniti vero ut, possimus harum omnis quas officia voluptatem
-            maxime saepe, voluptas asperiores exercitationem soluta inventore numquam
-            sed non! Sapiente saepe qui, aliquid, dolorem vero, magnam molestiae
-            officia adipisci minima architecto deleniti nihil dolore. Omnis aspernatur
-            dolorum error obcaecati officiis corporis ducimus incidunt odit magnam
-            blanditiis, provident, voluptatum deserunt animi accusantium ipsa ipsam
-            veritatis ex quisquam. Veniam vitae aliquid, odit dolorem officiis eum
-            dolorum modi. Nobis odit qui facilis corporis commodi ipsum magnam
-            accusamus ad quasi fugit! Sapiente similique nulla fugit doloribus eos,
-            reiciendis rerum numquam culpa ipsa quaerat provident nihil, reprehenderit
-            hic obcaecati asperiores sunt illum, atque officiis dicta ipsam ratione
-            necessitatibus. Assumenda in omnis, voluptates deserunt nemo mollitia
-            facere ad qui aperiam ullam unde nisi nobis sint a tempore recusandae quo
+      <div id="descriptionAreaBox">
+        <div class="descriptionAreaContent" [ngClass]="activeContentArea == 'About' ? 'selectedContent': selectedContentArea[0].appearanceDirection ">
+          <p class="text-white mb-1">Description</p>
+          <p class="text-white ms-2">
+            {{portfolioData.description}}
           </p>
         </div>
-        <div>
-          <p>
-            Technologies:
-          </p>
+        <div class="descriptionAreaContent" [ngClass]="activeContentArea == 'Technologies' ? 'selectedContent': selectedContentArea[1].appearanceDirection ">
+          <p class="text-white mb-1">Technologies:</p>
           <ul class="d-flex">
             <li class="imagePreview">
               <figure class="mb-0" id="imageContainer">
