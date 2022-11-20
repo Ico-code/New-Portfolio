@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PortfolioListItemComponent implements OnInit {
 
-  @Input() projectData:portfolioInterface = {id:0, img:'', title: '', description: ''};
+  @Input() projectData?:portfolioInterface;
 
   constructor() {}
 

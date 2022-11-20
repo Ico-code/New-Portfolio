@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormBuilder} from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactMeComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
   }

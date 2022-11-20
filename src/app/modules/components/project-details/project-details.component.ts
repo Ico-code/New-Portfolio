@@ -22,13 +22,15 @@ export class ProjectDetailsComponent implements OnInit {
   changeSelectedContentArea(activeID: string) {
     this.activeContentArea = activeID;
     let currentIDPosition = this.currentlyActiveID(this.activeContentArea);
-    console.log(currentIDPosition)
+    console.log(currentIDPosition);
     for (let i = 0; i < this.selectedContentArea.length; i++) {
       if (i < currentIDPosition) {
-        this.selectedContentArea[i].appearanceDirection = 'leftNotSelectedContent';
+        this.selectedContentArea[i].appearanceDirection =
+          'leftNotSelectedContent';
         return;
       } else if (i > currentIDPosition) {
-        this.selectedContentArea[i].appearanceDirection = 'rightNotSelectedContent';
+        this.selectedContentArea[i].appearanceDirection =
+          'rightNotSelectedContent';
         return;
       }
     }

@@ -3,15 +3,15 @@
     <div class="mb-4">
       <h1 class="text-white">{{portfolioData.title}}</h1>
       <p class="mb-0 text-white p-1">
-        Portfolio for showcasing my different projects
+        {{portfolioData.shortdescription}}
       </p>
-      <p class="mb-3 text-white p-1">Date: 9.10.2022</p>
-      <button class="my-2 visitWebsiteButton mb-4">
+      <p class="mb-3 text-white p-1">Date: {{portfolioData.date}}</p>
+      <a class="my-2 visitWebsiteButton mb-4" href="{{portfolioData.url}}">
         Visit The Website
-      </button>
+      </a>
       <figure class="mb-0" id="imageContainer">
         <img
-          src="../../../../assets/images/default-placeholder.png"
+          src="assets/images/default-placeholder.png"
           alt="Project image"
         />
       </figure>
@@ -34,28 +34,12 @@
         </div>
         <div class="descriptionAreaContent" [ngClass]="activeContentArea == 'Technologies' ? 'selectedContent': selectedContentArea[1].appearanceDirection ">
           <p class="text-white mb-1">Technologies:</p>
-          <ul class="d-flex">
-            <li class="imagePreview">
-              <figure class="mb-0" id="imageContainer">
-                <img
-                  src="../../../../assets/images/default-placeholder.png"
-                  alt="Project image"
-                />
-              </figure>
-            </li>
-            <li class="imagePreview">
-              <figure class="mb-0" id="imageContainer">
-                <img
-                  src="../../../../assets/images/default-placeholder.png"
-                  alt="Project image"
-                />
-              </figure>
-            </li>
-            <li class="imagePreview">
-              <figure class="mb-0" id="imageContainer">
-                <img
-                  src="../../../../assets/images/default-placeholder.png"
-                  alt="Project image"
+          <ul class="d-flex flex-wrap justify-content-center align-items-center">
+            <li class="imagePreview" *ngFor="let technology of portfolioData.technologies">
+              <figure class="mb-0 imageContainer">
+                <img class=""
+                  src="{{technology}}"
+                  alt="{{technology}}"
                 />
               </figure>
             </li>

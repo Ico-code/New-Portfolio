@@ -1,6 +1,10 @@
 export interface portfolioInterface {
   id: number,
-  img: string,
   title: string,
+  img: string,
+  url: string,
+  date:string,
+  shortdescription:string,
   description: string,
+  technologies:Array<string>,
 };

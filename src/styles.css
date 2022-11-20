@@ -19,3 +19,11 @@
 .bg-light-purple {
   background-color: rgb(127, 16, 255);
 }
+
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+}

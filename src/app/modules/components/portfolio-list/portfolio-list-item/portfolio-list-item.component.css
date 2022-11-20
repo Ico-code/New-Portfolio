@@ -5,6 +5,9 @@ img {
   max-width: 130%;
   transition: max-width 0.2s ease;
 }
+p {
+  margin-bottom: 0px;
+}
 .containerForFloatingText {
   border-radius: 10px;
   display: flex;
@@ -14,15 +17,34 @@ img {
   position: relative;
   max-height: 200px;
 }
+.lightgreyText {
+  color: rgb(189, 189, 189);
+}
+.shortDescription {
+  font-size: 0.9rem;
+}
 .floatingText {
-  background-color: rgba(1, 1, 1,0.7);
+  background-color: rgba(1, 1, 1, 0.7);
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
   color: black;
   padding: 10px;
+  transition: 0.2s ease;
+  transform: translate(0%, 100%);
 }
 .portfolioItem:hover > a > figure.containerForFloatingText > img {
   max-width: 150%;
+}
+.portfolioItem:hover > a > figure > .floatingText {
+  transform: translate(0%);
+}
+@media only screen and (max-width: 768px) {
+  .containerForFloatingText {
+    max-height: 300px;
+  }
+  .floatingText {
+    min-height: 45%;
+  }
 }

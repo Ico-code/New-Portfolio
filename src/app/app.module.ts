@@ -15,6 +15,7 @@ import { ContactFormComponent } from './modules/widgets/contact-form/contact-for
 import { PortfolioListComponent } from './modules/components/portfolio-list/portfolio-list.component';
 import { PortfolioListItemComponent } from './modules/components/portfolio-list/portfolio-list-item/portfolio-list-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

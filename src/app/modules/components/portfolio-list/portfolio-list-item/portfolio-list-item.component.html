@@ -1,10 +1,16 @@
 <div class="mb-4 portfolioItem">
-  <a [routerLink]="['/Project/',projectData.id]">
+  <a [routerLink]="['/Project/', projectData?.id]">
     <figure class="containerForFloatingText">
-      <img src="{{ projectData.img }}" alt="Test" />
-      <div class="floatingText">
-        <figcaption>{{ projectData.title }}</figcaption>
-        <p class="mb-3">>> View more</p>
+      <img src="{{ projectData?.img }}" alt="Test" />
+      <div class="floatingText px-3 py-2 d-flex flex-column justify-content-center">
+        <figcaption>{{ projectData?.title }}</figcaption>
+        <p class="lightgreyText shortDescription">{{projectData?.shortdescription}}</p>
+        <p class="mt-1">Tags:</p>
+        <ul class="d-flex ps-0 pb-2 flex-wrap">
+          <li class="ms-2 lightgreyText" *ngFor="let technology of projectData?.technologies">
+            {{ technology }},
+          </li>
+        </ul>
       </div>
     </figure>
   </a>
