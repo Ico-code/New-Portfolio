@@ -5,6 +5,12 @@ textarea {
   padding: 10px;
   outline: none;
 }
+textarea {
+  vertical-align: top;
+}
+label {
+  font-size: 0px;
+}
 .inputContainer {
   margin-bottom: 10px;
   overflow: hidden;
@@ -20,7 +26,7 @@ ul {
   transition: 0.2s width ease;
   padding: 1px;
   background-color: rgb(0, 187, 255);
-  margin-top: 5px;
+  margin-top: 0px;
   transition: max-width 0.2s ease;
 }
 .selected {
@@ -34,16 +40,34 @@ form {
 }
 #submitButton {
   max-width: 150px;
-  border-radius: 10px;
-  padding: 10px;
-  font-weight: 500;
-  background-color: rgb(0, 187, 255);
-  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-weight: 400;
   transition: 0.2s ease;
   border: none;
   max-width: fit-content;
 }
-#submitButton:hover {
+.submitDisabled {
+  background-color: rgb(4, 126, 170);
+  color: gray;
+}
+.submitAble {
+  background-color: rgb(0, 187, 255);
+  color: white;
+}
+.submitAble:hover {
   background-color: rgb(4, 160, 216);
   color: rgb(255, 204, 0);
+}
+#sentIndicator {
+  position: absolute;
+  color: white;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  left: 50%;
+  box-shadow: 0px 0px 4px 1px black;
 }

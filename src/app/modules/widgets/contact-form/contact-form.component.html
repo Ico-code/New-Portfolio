@@ -1,27 +1,86 @@
-<form action="#" class="d-flex flex-column container">
+<form action="#" class="d-flex flex-column container position-relative" [formGroup]="contactMeForm">
   <ul class="row">
-    <li class="inputContainer col-md-6">
-      <input type="text" id="Name" name="Name" placeholder="Name" (focus)="selected($event)" (focusout)="notSelected($event)"/>
+    <li class="inputContainer col-md-12">
+      <label for="Name">Name</label>
+      <input
+        type="text"
+        id="Name"
+        formControlName="Name"
+        placeholder="Name"
+        (focus)="selected($event)"
+        (focusout)="notSelected($event)"
+      />
       <div [ngClass]="isThisElementSelected('Name')"></div>
-      <label for="Name" [ngStyle]="{'font-size' : '0px'}">Name</label>
+      <div *ngIf="Name?.invalid && Name?.touched" class="d-flex bg-danger text-center p-1 my-1">
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p class="ms-1 mb-0">Name is required</p>
+      </div>
     </li>
-    <li class="inputContainer col-md-6">
-      <input type="text" id="Email" name="Email" placeholder="Email" (focus)="selected($event)" (focusout)="notSelected($event)"/>
+    <li class="inputContainer col-md-12">
+      <label for="Email">Email</label>
+      <input
+        type="text"
+        id="Email"
+        formControlName="Email"
+        placeholder="Email"
+        (focus)="selected($event)"
+        (focusout)="notSelected($event)"
+      />
       <div [ngClass]="isThisElementSelected('Email')"></div>
-      <label for="Email" [ngStyle]="{'font-size' : '0px'}">Email</label>
+      <div *ngIf="Email?.invalid && Email?.touched" class="d-flex bg-danger text-center p-1 my-1">
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p class="ms-1 mb-0">Email is required</p>
+      </div>
     </li>
     <li class="inputContainer col-md-12">
-      <input type="text" id="Topic" name="Topic" placeholder="Topic" (focus)="selected($event)" (focusout)="notSelected($event)"/>
+      <label for="Topic">Topic</label>
+      <input
+        type="text"
+        id="Topic"
+        formControlName="Topic"
+        placeholder="Topic"
+        (focus)="selected($event)"
+        (focusout)="notSelected($event)"
+      />
       <div [ngClass]="isThisElementSelected('Topic')"></div>
-      <label for="Topic" [ngStyle]="{'font-size' : '0px'}">Topic</label>
+      <div *ngIf="Topic?.invalid && Topic?.touched" class="d-flex bg-danger text-center p-1 my-1">
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p class="ms-1 mb-0">Topic is required</p>
+      </div>
     </li>
     <li class="inputContainer col-md-12">
-      <textarea name="Content" id="Content" cols="30" rows="10" placeholder="Content" (focus)="selected($event)" (focusout)="notSelected($event)"></textarea>
+      <label for="Content">Content</label>
+      <textarea
+        formControlName="Content"
+        id="Content"
+        cols="30"
+        rows="10"
+        placeholder="Content"
+        (focus)="selected($event)"
+        (focusout)="notSelected($event)"
+      ></textarea>
       <div [ngClass]="isThisElementSelected('Content')"></div>
-      <label for="Content" style="font-size : 0px">Content</label>
+      <div *ngIf="Content?.invalid && Content?.errors?.['minlength']" class="d-flex bg-danger text-center p-1 my-1">
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p class="ms-1 mb-0">The message has to be at least 10 characters long</p>
+      </div>
+      <div *ngIf="Content?.invalid && Content?.errors?.['maxlength']" class="d-flex">
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p>The message has to be shorter then 400 characters</p>
+      </div>
     </li>
     <li>
-      <button id="submitButton" type="submit">Send message</button>
+      <button
+        id="submitButton"
+        [ngClass]="contactMeForm.invalid ? 'submitDisabled' : 'submitAble'"
+        type="submit"
+        [disabled]="contactMeForm.invalid"
+      >
+        Send message
+      </button>
     </li>
   </ul>
+  <div id="sentIndicator">
+    Message has been sent
+  </div>
 </form>
