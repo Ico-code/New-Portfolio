@@ -34,3 +34,18 @@ a {
 .bg-light-purple {
   background-color: rgb(127, 16, 255);
 }
+.font-0_7rem {
+  font-size: 0.7rem;
+}
+.font-0_8rem {
+  font-size: 0.8rem;
+}
+.font-1rem {
+  font-size: 1rem;
+}
+.font-1_2rem {
+  font-size: 1.2rem;
+}
+.font-1_5rem {
+  font-size: 1.5rem;
+}
