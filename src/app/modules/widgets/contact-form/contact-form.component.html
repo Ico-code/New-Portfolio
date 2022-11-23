@@ -17,7 +17,7 @@
       <div [ngClass]="isThisElementSelected('Name')"></div>
       <div
         *ngIf="Name?.invalid && Name?.touched"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Name is required</p>
@@ -36,14 +36,14 @@
       <div [ngClass]="isThisElementSelected('Email')"></div>
       <div
         *ngIf="Email?.invalid && Email?.touched"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Email is required</p>
       </div>
       <div
         *ngIf="(Email?.invalid && Email?.touched) || (Email?.errors?.['email'] && Email?.touched)"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Email is not in the right format</p>
@@ -62,7 +62,7 @@
       <div [ngClass]="isThisElementSelected('Topic')"></div>
       <div
         *ngIf="Topic?.invalid && Topic?.touched"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Topic is required</p>
@@ -83,7 +83,7 @@
       <div [ngClass]="isThisElementSelected('Content')"></div>
       <div
         *ngIf="((Content?.invalid && Content?.errors?.['maxlength'] == undefined) && Content?.touched) || Content?.errors?.['minlength']"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">
@@ -92,7 +92,7 @@
       </div>
       <div
         *ngIf="Content?.invalid && Content?.errors?.['maxlength']"
-        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+        class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">The message has to be shorter than {{maxLength}} characters</p>
@@ -111,4 +111,5 @@
     </li>
   </ul>
 </form>
-<div id="sentIndicator">Message has been sent</div>
+<div id="sentIndicator" *ngIf="">Message has been sent</div>
+<div id="sentIndicator">There was an error trying to send your message, please try again later.</div>

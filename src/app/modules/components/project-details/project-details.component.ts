@@ -3,15 +3,23 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { portfolioInterface } from './../../services/portfolioService/portfolioListInterface';
 import { LogosService } from '../../services/logos/logos.service';
-import {TooltipPosition} from '@angular/material/tooltip';
-import {MatTooltip} from '@angular/material';
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
   styleUrls: ['./project-details.component.css'],
 })
 export class ProjectDetailsComponent implements OnInit {
-  portfolioData: portfolioInterface;
+  portfolioData: portfolioInterface = {
+    id: 0,
+    img: '',
+    title: '',
+    shortdescription: '',
+    date: '',
+    url: '',
+    technologies: [''],
+    description:
+      '',
+  };
   id: number = 0;
   private sub: any;
 
@@ -56,14 +64,13 @@ export class ProjectDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private portfolioService: PortfolioService,
-    public logoService : LogosService
-  ) {
-    this.portfolioData = this.portfolioService.getPortfolioItem(this.id);
-  }
+    public logoService: LogosService
+  ) {}
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe((params) => {
       this.id = +params['id'];
+      this.portfolioData = this.portfolioService.getPortfolioItem(this.id);
     });
   }
 

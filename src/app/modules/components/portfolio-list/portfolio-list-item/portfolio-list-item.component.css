@@ -2,7 +2,7 @@
   color: white;
 }
 img {
-  max-width: 130%;
+  max-width: 100%;
   transition: max-width 0.2s ease;
 }
 p {
@@ -12,19 +12,21 @@ p {
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   overflow: hidden;
   position: relative;
+  background-color: white;
   max-height: 200px;
+  min-height: 200px;
 }
 .lightgreyText {
-  color: rgb(189, 189, 189);
+  color: rgb(184, 184, 184);
 }
 .shortDescription {
   font-size: 0.9rem;
 }
 .floatingText {
-  background-color: rgba(1, 1, 1, 0.7);
+  background-color: rgba(1, 1, 1, 0.8);
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -35,16 +37,35 @@ p {
   transform: translate(0%, 100%);
 }
 .portfolioItem:hover > a > figure.containerForFloatingText > img {
-  max-width: 150%;
+  max-width: 110%;
 }
 .portfolioItem:hover > a > figure > .floatingText {
   transform: translate(0%);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width:600px) {
   .containerForFloatingText {
-    max-height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    max-height: 200px;
+    min-height: 200px;
   }
-  .floatingText {
-    min-height: 40%;
+
+}
+@media only screen and (max-width:768px) {
+  .containerForFloatingText {
+    max-height: 250px;
+    min-height: 250px;
   }
+
+}
+@media only screen and (max-width:468px) {
+  .containerForFloatingText {
+    align-items: center;
+  }
+
 }

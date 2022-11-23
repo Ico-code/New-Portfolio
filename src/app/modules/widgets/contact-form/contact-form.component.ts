@@ -12,7 +12,7 @@ interface formControls {
   styleUrls: ['./contact-form.component.css'],
 })
 export class ContactFormComponent implements OnInit {
-  minLength: number = 20;
+  minLength: number = 10;
   maxLength: number = 600;
 
   faSquareXmark = faSquareXmark;
@@ -25,8 +25,6 @@ export class ContactFormComponent implements OnInit {
     { id: 'Topic', selected: false },
     { id: 'Content', selected: false },
   ];
-
-  sendMessage() {}
 
   selected(event: Event): void {
     var target = (event.target as HTMLInputElement).id;
@@ -90,6 +88,10 @@ export class ContactFormComponent implements OnInit {
 
   get Content() {
     return this.contactMeForm.get('Content');
+  }
+
+  sendMessage(){
+    console.log(this.contactMeForm.value)
   }
 
   ngOnInit() {}

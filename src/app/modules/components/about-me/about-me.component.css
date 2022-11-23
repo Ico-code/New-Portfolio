@@ -15,15 +15,24 @@ figure.myPicture {
   align-items: center;
   overflow: hidden;
   max-width: 100%;
+  background-color: white;
   max-height: 550px;
 }
-figure {
+figure.skillLogo {
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   max-width: 100%;
-  max-height: 100px;
+  max-height: 200px;
+  min-height: 109px;
+}
+figure.skillLogo img {
+  max-width: 50%;
+}
+figure.myPicture img {
+  max-width: 500px;
 }
 img {
   max-width: 100%;

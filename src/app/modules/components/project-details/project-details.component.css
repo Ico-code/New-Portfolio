@@ -23,7 +23,7 @@ ul {
 #bigImageContainer {
   max-height: 500px;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   display: flex;
   overflow: hidden;
 }
