@@ -17,7 +17,7 @@
       <div [ngClass]="isThisElementSelected('Name')"></div>
       <div
         *ngIf="Name?.invalid && Name?.touched"
-        class="d-flex bg-danger text-white text-center p-1 my-1"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Name is required</p>
@@ -36,10 +36,17 @@
       <div [ngClass]="isThisElementSelected('Email')"></div>
       <div
         *ngIf="Email?.invalid && Email?.touched"
-        class="d-flex bg-danger text-white text-center p-1 my-1"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Email is required</p>
+      </div>
+      <div
+        *ngIf="(Email?.invalid && Email?.touched) || (Email?.errors?.['email'] && Email?.touched)"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
+      >
+        <fa-icon [icon]="faSquareXmark"></fa-icon>
+        <p class="ms-1 mb-0">Email is not in the right format</p>
       </div>
     </li>
     <li class="inputContainer">
@@ -55,14 +62,14 @@
       <div [ngClass]="isThisElementSelected('Topic')"></div>
       <div
         *ngIf="Topic?.invalid && Topic?.touched"
-        class="d-flex bg-danger text-white text-center p-1 my-1"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Topic is required</p>
       </div>
     </li>
     <li class="inputContainer">
-      <p class="mb-0 infoText">Content field has to have at least 10 characters, but not more than 400*</p>
+      <p class="mb-0 infoText">Content field has to have at least {{minLength}} characters, but not more than {{maxLength}}*</p>
       <label for="Content">Content</label>
       <textarea
         formControlName="Content"
@@ -75,20 +82,20 @@
       ></textarea>
       <div [ngClass]="isThisElementSelected('Content')"></div>
       <div
-        *ngIf="(Content?.invalid && Content?.touched) || (Content?.errors?.['minlength'])"
-        class="d-flex bg-danger text-white text-center p-1 my-1"
+        *ngIf="((Content?.invalid && Content?.errors?.['maxlength'] == undefined) && Content?.touched) || Content?.errors?.['minlength']"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">
-          The message has to be at least 10 characters long
+          The message has to be at least {{minLength}} characters long
         </p>
       </div>
       <div
         *ngIf="Content?.invalid && Content?.errors?.['maxlength']"
-        class="d-flex"
+        class="d-flex bg-danger text-white text-center p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
-        <p>The message has to be shorter then 400 characters</p>
+        <p class="ms-1 mb-0">The message has to be shorter than {{maxLength}} characters</p>
       </div>
     </li>
     <li>

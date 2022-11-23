@@ -12,10 +12,12 @@ interface formControls {
   styleUrls: ['./contact-form.component.css'],
 })
 export class ContactFormComponent implements OnInit {
+  minLength: number = 20;
+  maxLength: number = 600;
 
   faSquareXmark = faSquareXmark;
 
-  contactMeForm:FormGroup
+  contactMeForm: FormGroup;
 
   selectedForms: Array<formControls> = [
     { id: 'Name', selected: false },
@@ -24,9 +26,7 @@ export class ContactFormComponent implements OnInit {
     { id: 'Content', selected: false },
   ];
 
-  sendMessage(){
-
-  }
+  sendMessage() {}
 
   selected(event: Event): void {
     var target = (event.target as HTMLInputElement).id;
@@ -60,46 +60,37 @@ export class ContactFormComponent implements OnInit {
     return 'unselected blueSelected';
   }
 
-  constructor(
-    private fb: FormBuilder
-  ) {
+  constructor(private fb: FormBuilder) {
     this.contactMeForm = this.fb.group({
-      Name:['',[
-        Validators.required,
-      ]],
-      Email:['',[
-        Validators.required,
-        Validators.email
-      ]],
-      Topic:['',[
-        Validators.required
-      ]],
-      Content:['',[
-        Validators.required,
-        Validators.minLength(10),
-        Validators.maxLength(400)
-      ]]
+      Name: ['', [Validators.required]],
+      Email: ['', [Validators.required, Validators.email]],
+      Topic: ['', [Validators.required]],
+      Content: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(this.minLength),
+          Validators.maxLength(this.maxLength),
+        ],
+      ],
     });
   }
 
   get Name() {
-    return this.contactMeForm.get('Name')
+    return this.contactMeForm.get('Name');
   }
 
   get Email() {
-    return this.contactMeForm.get('Email')
+    return this.contactMeForm.get('Email');
   }
 
   get Topic() {
-    return this.contactMeForm.get('Topic')
+    return this.contactMeForm.get('Topic');
   }
 
   get Content() {
-    return this.contactMeForm.get('Content')
+    return this.contactMeForm.get('Content');
   }
 
-
-  ngOnInit() {
-    this.contactMeForm.valueChanges.subscribe(console.log);
-  }
+  ngOnInit() {}
 }

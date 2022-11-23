@@ -80,3 +80,6 @@ form {
   color: rgb(238, 238, 238);
   font-size: 0.75rem;
 }
+.errorMsg {
+  border-radius: 10px;
+}

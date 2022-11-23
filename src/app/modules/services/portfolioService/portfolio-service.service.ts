@@ -15,7 +15,6 @@ export class PortfolioService {
     ids.forEach(id => {
       arrays.push(this.portfolioItems[id])
     });
-    console.log(arrays)
     return arrays;
   }
 
