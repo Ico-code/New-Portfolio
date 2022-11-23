@@ -1,8 +1,8 @@
+import { PortfolioService } from './../../services/portfolioService/portfolio-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { portfolioInterface } from './../../services/portfolioListInterface';
-import { PortfolioService } from '../../services/portfolio-service.service';
-
+import { portfolioInterface } from './../../services/portfolioService/portfolioListInterface';
+import { LogosService } from '../../services/logos/logos.service';
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
@@ -54,7 +54,8 @@ export class ProjectDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private portfolioService: PortfolioService
+    private portfolioService: PortfolioService,
+    public logoService : LogosService
   ) {
     this.portfolioData = this.portfolioService.getPortfolioItem(this.id);
   }

@@ -20,7 +20,7 @@ ul {
   max-width: 4em;
   min-width: 4em;
 }
-.imageContainer {
+#bigImageContainer {
   max-height: 500px;
   justify-content: center;
   align-items: center;
@@ -85,4 +85,20 @@ button.visitWebsiteButton:hover {
 }
 .leftNotSelectedContent {
   transform: translate(-100%);
+}
+.technologyLogos {
+  max-width: 100%;
+}
+.logoContainer {
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: background-color 0.2s ease;
+}
+.logoContainer:hover {
+  background-color: white;
 }

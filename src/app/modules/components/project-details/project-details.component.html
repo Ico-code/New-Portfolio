@@ -1,45 +1,82 @@
 <article class="bg-purple">
   <section class="p-3 contentContainer">
     <div class="mb-4">
-      <h1 class="text-white">{{portfolioData.title}}</h1>
+      <h1 class="text-white">{{ portfolioData.title }}</h1>
       <p class="mb-0 text-white p-1">
-        {{portfolioData.shortdescription}}
+        {{ portfolioData.shortdescription }}
       </p>
-      <p class="mb-3 text-white p-1">Date: {{portfolioData.date}}</p>
-      <a class="my-2 visitWebsiteButton mb-4" href="{{portfolioData.url}}">
+      <p class="mb-3 text-white p-1">Date: {{ portfolioData.date }}</p>
+      <a class="my-2 visitWebsiteButton mb-4" href="{{ portfolioData.url }}">
         Visit The Website
       </a>
-      <figure class="mb-0" id="imageContainer">
-        <img
-          src="assets/images/default-placeholder.png"
-          alt="Project image"
-        />
+      <figure class="mb-0" id="bigImageContainer">
+        <img src="assets/images/default-placeholder.png" alt="Project image" />
       </figure>
     </div>
     <div class="bg-light-purple p-3 my-5" id="descriptionArea">
       <ul class="d-flex mb-0">
-        <li class="mx-1 p-2 text-white descriptionAreaTabs" [ngClass]="activeContentArea == 'About' ? 'bg-selected': 'bg-light-purple'" (click)="changeSelectedContentArea('About')">
+        <li
+          class="mx-1 p-2 text-white descriptionAreaTabs"
+          [ngClass]="
+            activeContentArea == 'About' ? 'bg-selected' : 'bg-light-purple'
+          "
+          (click)="changeSelectedContentArea('About')"
+        >
           About
         </li>
-        <li class="mx-1 p-2 text-white descriptionAreaTabs" [ngClass]="activeContentArea == 'Technologies' ? 'bg-selected': 'bg-light-purple'" (click)="changeSelectedContentArea('Technologies')">
+        <li
+          class="mx-1 p-2 text-white descriptionAreaTabs"
+          [ngClass]="
+            activeContentArea == 'Technologies'
+              ? 'bg-selected'
+              : 'bg-light-purple'
+          "
+          (click)="changeSelectedContentArea('Technologies')"
+        >
           Technologies
         </li>
       </ul>
       <div id="descriptionAreaBox">
-        <div class="descriptionAreaContent" [ngClass]="activeContentArea == 'About' ? 'selectedContent': selectedContentArea[0].appearanceDirection ">
+        <div
+          class="descriptionAreaContent"
+          [ngClass]="
+            activeContentArea == 'About'
+              ? 'selectedContent'
+              : selectedContentArea[0].appearanceDirection
+          "
+        >
           <p class="text-white mb-1">Description</p>
           <p class="text-white ms-2">
-            {{portfolioData.description}}
+            {{ portfolioData.description }}
           </p>
         </div>
-        <div class="descriptionAreaContent" [ngClass]="activeContentArea == 'Technologies' ? 'selectedContent': selectedContentArea[1].appearanceDirection ">
+        <div
+          class="descriptionAreaContent"
+          [ngClass]="
+            activeContentArea == 'Technologies'
+              ? 'selectedContent'
+              : selectedContentArea[1].appearanceDirection
+          "
+        >
           <p class="text-white mb-1">Technologies:</p>
-          <ul class="d-flex flex-wrap justify-content-center align-items-center">
-            <li class="imagePreview" *ngFor="let technology of portfolioData.technologies">
-              <figure class="mb-0 imageContainer">
-                <img class=""
-                  src="{{technology}}"
-                  alt="{{technology}}"
+          <ul
+            class="d-flex flex-wrap justify-content-center align-items-center"
+          >
+            <li
+              class="imagePreview"
+              *ngFor="let technology of portfolioData.technologies"
+            >
+              <figure class="mb-0 logoContainer">
+                <button
+                  mat-raised-button
+                  matTooltip="Info about the action"
+                  matTooltipPosition="'below'"
+                  aria-label="Button that displays a tooltip when focused or hovered over"
+                ></button>
+                <img
+                  class="technologyLogos"
+                  src="{{ logoService.getTechnology(technology) }}"
+                  alt="{{ technology }}"
                 />
               </figure>
             </li>

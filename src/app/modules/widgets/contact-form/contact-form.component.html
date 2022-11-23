@@ -1,70 +1,92 @@
-<form action="#" class="d-flex flex-column container position-relative" [formGroup]="contactMeForm">
-  <ul class="row">
-    <li class="inputContainer col-md-12">
+<form
+  action="#"
+  class="d-flex flex-column container position-relative"
+  [formGroup]="contactMeForm"
+>
+  <ul class="row justify-content-center align-items-center">
+    <li class="inputContainer">
       <label for="Name">Name</label>
       <input
         type="text"
         id="Name"
         formControlName="Name"
-        placeholder="Name"
+        placeholder="Name*"
         (focus)="selected($event)"
         (focusout)="notSelected($event)"
       />
       <div [ngClass]="isThisElementSelected('Name')"></div>
-      <div *ngIf="Name?.invalid && Name?.touched" class="d-flex bg-danger text-center p-1 my-1">
+      <div
+        *ngIf="Name?.invalid && Name?.touched"
+        class="d-flex bg-danger text-white text-center p-1 my-1"
+      >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Name is required</p>
       </div>
     </li>
-    <li class="inputContainer col-md-12">
+    <li class="inputContainer">
       <label for="Email">Email</label>
       <input
         type="text"
         id="Email"
         formControlName="Email"
-        placeholder="Email"
+        placeholder="Email*"
         (focus)="selected($event)"
         (focusout)="notSelected($event)"
       />
       <div [ngClass]="isThisElementSelected('Email')"></div>
-      <div *ngIf="Email?.invalid && Email?.touched" class="d-flex bg-danger text-center p-1 my-1">
+      <div
+        *ngIf="Email?.invalid && Email?.touched"
+        class="d-flex bg-danger text-white text-center p-1 my-1"
+      >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Email is required</p>
       </div>
     </li>
-    <li class="inputContainer col-md-12">
+    <li class="inputContainer">
       <label for="Topic">Topic</label>
       <input
         type="text"
         id="Topic"
         formControlName="Topic"
-        placeholder="Topic"
+        placeholder="Topic*"
         (focus)="selected($event)"
         (focusout)="notSelected($event)"
       />
       <div [ngClass]="isThisElementSelected('Topic')"></div>
-      <div *ngIf="Topic?.invalid && Topic?.touched" class="d-flex bg-danger text-center p-1 my-1">
+      <div
+        *ngIf="Topic?.invalid && Topic?.touched"
+        class="d-flex bg-danger text-white text-center p-1 my-1"
+      >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">Topic is required</p>
       </div>
     </li>
-    <li class="inputContainer col-md-12">
+    <li class="inputContainer">
+      <p class="mb-0 infoText">Content field has to have at least 10 characters, but not more than 400*</p>
       <label for="Content">Content</label>
       <textarea
         formControlName="Content"
         id="Content"
         cols="30"
         rows="10"
-        placeholder="Content"
+        placeholder="Content*"
         (focus)="selected($event)"
         (focusout)="notSelected($event)"
       ></textarea>
       <div [ngClass]="isThisElementSelected('Content')"></div>
-      <div *ngIf="Content?.invalid && Content?.errors?.['minlength']" class="d-flex bg-danger text-center p-1 my-1">
+      <div
+        *ngIf="(Content?.invalid && Content?.touched) || (Content?.errors?.['minlength'])"
+        class="d-flex bg-danger text-white text-center p-1 my-1"
+      >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
-        <p class="ms-1 mb-0">The message has to be at least 10 characters long</p>
+        <p class="ms-1 mb-0">
+          The message has to be at least 10 characters long
+        </p>
       </div>
-      <div *ngIf="Content?.invalid && Content?.errors?.['maxlength']" class="d-flex">
+      <div
+        *ngIf="Content?.invalid && Content?.errors?.['maxlength']"
+        class="d-flex"
+      >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p>The message has to be shorter then 400 characters</p>
       </div>
@@ -75,12 +97,11 @@
         [ngClass]="contactMeForm.invalid ? 'submitDisabled' : 'submitAble'"
         type="submit"
         [disabled]="contactMeForm.invalid"
+        (click)="sendMessage()"
       >
         Send message
       </button>
     </li>
   </ul>
-  <div id="sentIndicator">
-    Message has been sent
-  </div>
 </form>
+<div id="sentIndicator">Message has been sent</div>

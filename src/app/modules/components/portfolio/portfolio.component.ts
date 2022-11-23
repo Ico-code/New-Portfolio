@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from '../../services/portfolio-service.service';
-import { portfolioInterface } from '../../services/portfolioListInterface';
+import { PortfolioService } from '../../services/portfolioService/portfolio-service.service';
+import { portfolioInterface } from '../../services/portfolioService/portfolioListInterface';
 
 @Component({
   selector: 'app-portfolio',

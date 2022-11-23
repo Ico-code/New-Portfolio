@@ -1,6 +1,6 @@
-import { portfolioInterface } from './../../services/portfolioListInterface';
+import { portfolioInterface } from './../../services/portfolioService/portfolioListInterface';
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from '../../services/portfolio-service.service';
+import { PortfolioService } from '../../services/portfolioService/portfolio-service.service';
 
 @Component({
   selector: 'app-home',

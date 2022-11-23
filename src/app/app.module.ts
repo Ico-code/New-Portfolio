@@ -16,7 +16,8 @@ import { PortfolioListComponent } from './modules/components/portfolio-list/port
 import { PortfolioListItemComponent } from './modules/components/portfolio-list/portfolio-list-item/portfolio-list-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['assets/images/Angular_full_color_logo.svg','assets/images/Bootstrap_logo.svg','assets/images/CSS3_logo_and_wordmark.svg','assets/images/Git-logo.svg','assets/images/github.svg','assets/images/HTML5_logo_and_wordmark.svg','assets/images/JSON_vector_logo.svg','assets/images/Typescript_logo_2020.svg','assets/images/Unofficial_JavaScript_logo_2.svg'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
   {
@@ -19,7 +19,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['assets/images/Angular_full_color_logo.svg','assets/images/Bootstrap_logo.svg','assets/images/CSS3_logo_and_wordmark.svg','assets/images/Git_logo.svg','assets/images/github.svg','assets/images/HTML5_logo_and_wordmark.svg','assets/images/JSON_vector_logo.svg','assets/images/Typescript_logo_2020.svg','assets/images/Unofficial_Javascript_logo_2.svg'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
   {
@@ -29,7 +29,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['HTML','CSS','Javascript','Angular','Bootstrap','Typescript','Git','Json','Fontawesome'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
   {
@@ -39,7 +39,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['HTML','CSS','Javascript','Angular','Bootstrap','Typescript','Git','Json','Fontawesome'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
   {
@@ -49,7 +49,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['HTML','CSS','Javascript','Angular','Bootstrap','Typescript','Git','Json','Fontawesome'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
   {
@@ -59,7 +59,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:'Portfolio for showing other projects',
     date:'1.10.2022',
     url:'something-random',
-    technologies:['HTML','CSS','Javascript','Angular','Bootstrap','Typescript','Git','Json','Fontawesome'],
+    technologies:['Angular','Bootstrap','CSS','Git','HTML','JSON','Typescript','Javascript'],
     description:'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk'
   },
 ];

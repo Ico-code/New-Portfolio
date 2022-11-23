@@ -24,6 +24,10 @@ export class ContactFormComponent implements OnInit {
     { id: 'Content', selected: false },
   ];
 
+  sendMessage(){
+
+  }
+
   selected(event: Event): void {
     var target = (event.target as HTMLInputElement).id;
     this.selectedForms.forEach((element) => {
