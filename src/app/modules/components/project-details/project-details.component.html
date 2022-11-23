@@ -66,13 +66,11 @@
               class="imagePreview"
               *ngFor="let technology of portfolioData.technologies"
             >
-              <figure class="mb-0 logoContainer">
-                <button
-                  mat-raised-button
-                  matTooltip="Info about the action"
-                  matTooltipPosition="'below'"
-                  aria-label="Button that displays a tooltip when focused or hovered over"
-                ></button>
+              <figure
+                class="mb-0 logoContainer"
+                matTooltip="{{technology}}"
+                matTooltipPosition="below"
+              >
                 <img
                   class="technologyLogos"
                   src="{{ logoService.getTechnology(technology) }}"

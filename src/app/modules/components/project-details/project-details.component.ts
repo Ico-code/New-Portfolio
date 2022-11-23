@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { portfolioInterface } from './../../services/portfolioService/portfolioListInterface';
 import { LogosService } from '../../services/logos/logos.service';
+import {TooltipPosition} from '@angular/material/tooltip';
+import {MatTooltip} from '@angular/material';
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
@@ -22,7 +24,6 @@ export class ProjectDetailsComponent implements OnInit {
   changeSelectedContentArea(activeID: string) {
     this.activeContentArea = activeID;
     let currentIDPosition = this.currentlyActiveID(this.activeContentArea);
-    console.log(currentIDPosition);
     for (let i = 0; i < this.selectedContentArea.length; i++) {
       if (i < currentIDPosition) {
         this.selectedContentArea[i].appearanceDirection =

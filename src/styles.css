@@ -1,4 +1,19 @@
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
 /* You can add global styles to this file, and also import other style files */
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+}
+.mat-tooltip {
+  background-color: rgb(0, 162, 255);
+  position: relative !important;
+  margin: -10px 10px !important;
+  padding: 5px 10px !important;
+}
 .contentContainer {
   max-width: 1020px;
   margin-right: auto;
@@ -18,12 +33,4 @@
 }
 .bg-light-purple {
   background-color: rgb(127, 16, 255);
-}
-
-ul {
-  list-style: none;
-  margin-bottom: 0px;
-}
-a {
-  text-decoration: none;
 }
