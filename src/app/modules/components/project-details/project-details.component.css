@@ -43,7 +43,7 @@ ul {
 .visitWebsiteButton:hover {
   background-color: rgb(0, 158, 215);
 }
-button.visitWebsiteButton:hover {
+.visitWebsiteButton:hover {
   background-color: rgb(4, 160, 216);
   color: rgb(255, 204, 0);
 }
