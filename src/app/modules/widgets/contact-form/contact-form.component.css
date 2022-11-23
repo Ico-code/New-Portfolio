@@ -60,6 +60,16 @@ form {
   color: rgb(255, 204, 0);
 }
 #sentIndicator {
+  color: white;
+  background-color: rgb(164, 66, 255);
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* #sentIndicator {
   position: absolute;
   color: white;
   background-color: gray;
@@ -74,7 +84,7 @@ form {
   text-align: center;
   box-shadow: 0px 0px 4px 1px black;
   display: none;
-}
+} */
 .infoText {
   margin-left: 5px;
   color: rgb(238, 238, 238);

@@ -69,7 +69,10 @@
       </div>
     </li>
     <li class="inputContainer">
-      <p class="mb-0 infoText">Content field has to have at least {{minLength}} characters, but not more than {{maxLength}}*</p>
+      <p class="mb-0 infoText">
+        Content field has to have at least {{ minLength }} characters, but not
+        more than {{ maxLength }}*
+      </p>
       <label for="Content">Content</label>
       <textarea
         formControlName="Content"
@@ -87,7 +90,7 @@
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
         <p class="ms-1 mb-0">
-          The message has to be at least {{minLength}} characters long
+          The message has to be at least {{ minLength }} characters long
         </p>
       </div>
       <div
@@ -95,7 +98,9 @@
         class="d-flex bg-danger text-white p-2 my-1 errorMsg"
       >
         <fa-icon [icon]="faSquareXmark"></fa-icon>
-        <p class="ms-1 mb-0">The message has to be shorter than {{maxLength}} characters</p>
+        <p class="ms-1 mb-0">
+          The message has to be shorter than {{ maxLength }} characters
+        </p>
       </div>
     </li>
     <li>
@@ -109,7 +114,7 @@
         Send message
       </button>
     </li>
+    <li><div id="sentIndicator" *ngIf="formSent">Message has been sent</div></li>
   </ul>
 </form>
-<div id="sentIndicator" *ngIf="">Message has been sent</div>
-<div id="sentIndicator">There was an error trying to send your message, please try again later.</div>
+<!-- <div id="sentIndicator">There was an error trying to send your message, please try again later.</div> -->

@@ -15,6 +15,8 @@ export class ContactFormComponent implements OnInit {
   minLength: number = 10;
   maxLength: number = 600;
 
+  formSent: boolean = false;
+
   faSquareXmark = faSquareXmark;
 
   contactMeForm: FormGroup;
@@ -90,8 +92,9 @@ export class ContactFormComponent implements OnInit {
     return this.contactMeForm.get('Content');
   }
 
-  sendMessage(){
-    console.log(this.contactMeForm.value)
+  sendMessage() {
+    this.formSent = true;
+    console.log(this.contactMeForm.value);
   }
 
   ngOnInit() {}
