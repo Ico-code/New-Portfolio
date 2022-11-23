@@ -7,7 +7,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     title: 'Angular Tour of Heroes',
     shortdescription:
       'Angular tour of heroes is a website built based on a guide made by the angular team',
-    date: '6 march 2021',
+    date: '6 March 2021',
     url: 'https://ico-code.github.io/Angular-tour-of-heroes/dashboard',
     technologies: ['Angular', 'CSS', 'Git', 'HTML', 'JSON', 'Typescript'],
     description:
@@ -33,7 +33,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     img: 'assets/images/website-pictures/W11.PNG',
     title: 'Introduction to more advanced CSS',
     shortdescription: 'WOS11 acts as a introduction to more advanced CSS',
-    date: '2.11.2022',
+    date: '2 Novermber 2022',
     url: 'https://ico-code.github.io/W11/',
     technologies: [
       'CSS',
@@ -48,7 +48,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     img: 'assets/images/website-pictures/W9.PNG',
     title: 'More Bootstrap',
     shortdescription: 'Project for learning more about Bootstrap',
-    date: '1.11.2022',
+    date: '1 November 2022',
     url: 'https://ico-code.github.io/W9/',
     technologies: [
       'Angular',
@@ -68,7 +68,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     img: 'assets/images/website-pictures/W5.PNG',
     title: 'More CSS and HTML',
     shortdescription: 'Project for learning more about HTML and CSS',
-    date: '15.9.2022',
+    date: '15 September 2022',
     url: 'https://ico-code.github.io/W5/index.html',
     technologies: [
       'CSS',
@@ -80,11 +80,11 @@ export var portfolioItems: Array<portfolioInterface> = [
   },
   {
     id: 5,
-    img: 'assets/images/other/default-placeholder.png',
-    title: 'Random Title',
-    shortdescription: 'Portfolio for showing other projects',
-    date: '1.10.2022',
-    url: 'something-random',
+    img: 'assets/images/website-pictures/W10.PNG',
+    title: 'Tables and Forms',
+    shortdescription: 'Project for learning about tables and forms',
+    date: '23 November 2022',
+    url: 'https://ico-code.github.io/WOS10/',
     technologies: [
       'Angular',
       'Bootstrap',
@@ -93,9 +93,8 @@ export var portfolioItems: Array<portfolioInterface> = [
       'HTML',
       'JSON',
       'Typescript',
-      'Javascript',
     ],
     description:
-      'lorefemiuuuuunf eunfi uefbiebfieb fuebfuevbfguevbfj dvbfhdbfebfi ifbhsifbsijfbeib esbfiebfseibfsdjifbdjfbisefb fbsjfbsnfbfbeih bfjsbifesufsbjkfbdnsbfie hfbefhbsdhf bhfbdhb dhfbdh bd  dbh djbdhb sdjkfbeh  wiwfof w f  grgrttk',
+      'This project was started to learn more about HTML forms and tables. This project contains both a HTML table and a form built using angular ad bootstrap. This form allows you to add data to the table next to it.',
   },
 ];

@@ -1,29 +1,24 @@
 <section id="AboutMe" class="bg-purple px-3">
-    <div class="contentContainer py-5">
-      <div class="row">
-        <div class="col-md-6 d-flex flex-column justify-content-center mb-4">
-          <h2 class="d-block text-white">About Me</h2>
-          <p class="text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            iusto sequi. Porro exercitationem dolorem nisi impedit tempore quod,
-            repellendus esse, praesentium consequuntur accusantium ipsa quo quia
-            enim adipisci? Sit dicta tenetur saepe vero necessitatibus nesciunt
-            alias magnam nemo eius nam earum quod, velit ut voluptate. Dolor
-            tempore quasi eaque praesentium?
-          </p>
-          <a href="/About" class="learnMoreButton p-2">Learn more</a>
-        </div>
-        <div
-          class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-        >
-          <figure>
-            <img
-              src="assets/images/other/me.jpeg"
-              alt="idk"
-            />
-          </figure>
-        </div>
+  <div class="contentContainer py-5">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column justify-content-center mb-4">
+        <h2 class="d-block text-white">About Me</h2>
+        <p class="text-white">
+          I’m a Student studying at Laurea: University of sciences. I am
+          currently located in Finand and I have a serious passion for learning
+          more about UI effects, animations, and creating intuitive, dynamic
+          user experiences.
+        </p>
+        <a href="/About" class="learnMoreButton p-2">Learn more</a>
       </div>
+      <div
+        class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+      >
+        <figure>
+          <img src="assets/images/other/me.jpeg" alt="idk" />
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 <div>
@@ -35,7 +30,9 @@
         portfolio.
       </p>
       <a href="/Portfolio" class="learnMoreButton p-2">Learn more</a>
-      <app-portfolio-list [portfolioItems]="portfolioItems"></app-portfolio-list>
+      <app-portfolio-list
+        [portfolioItems]="portfolioItems"
+      ></app-portfolio-list>
     </div>
   </section>
   <section id="ContactForm" class="p-4 bg-purple">
