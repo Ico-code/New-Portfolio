@@ -8,7 +8,7 @@ export var portfolioItems: Array<portfolioInterface> = [
     shortdescription:
       'Angular tour of heroes is a website built based on a guide made by the angular team',
     date: '6 March 2021',
-    url: 'https://ico-code.github.io/Angular-tour-of-heroes/dashboard',
+    url: 'https://ico-code.github.io/Angular-tour-of-heroes/',
     technologies: ['Angular', 'CSS', 'Git', 'HTML', 'JSON', 'Typescript'],
     description:
       'Angular tour of heroes is a guide, made by the Angular-team at google that is meant for teaching new people to angular, the basics of how to use angular to develope websites.',
