@@ -9,7 +9,7 @@
           more about UI effects, animations, and creating intuitive, dynamic
           user experiences.
         </p>
-        <a href="/About" class="learnMoreButton p-2">Learn more</a>
+        <a [routerLink]="['/About']" class="learnMoreButton p-2">Learn more</a>
       </div>
       <div
         class="col-md-6 d-flex flex-column justify-content-center align-items-center"
@@ -29,7 +29,7 @@
         This part of the page includes some of my favorite projects, from my
         portfolio.
       </p>
-      <a href="/Portfolio" class="learnMoreButton p-2">Learn more</a>
+      <a [routerLink]="['/Portfolio']" class="learnMoreButton p-2">Learn more</a>
       <app-portfolio-list
         [portfolioItems]="portfolioItems"
       ></app-portfolio-list>

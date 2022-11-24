@@ -4,7 +4,7 @@
       <li class="me-auto">
         <figure class="ms-4 mb-0" id="logo">
           <a
-            href="/Home"
+            [routerLink]="['/Home']"
             class="d-flex justify-content-center align-items-center"
           >
             <img
@@ -18,16 +18,16 @@
         *ngIf="mobileView == false; else mobileMenu"
       >
         <li class="ms-4">
-          <a href="/Home">Home</a>
+          <a [routerLink]="['/Home']">Home</a>
         </li>
         <li class="ms-4">
-          <a href="/Portfolio">Portfolio</a>
+          <a [routerLink]="['/Portfolio']">Portfolio</a>
         </li>
         <li class="ms-4">
-          <a href="/About">About</a>
+          <a [routerLink]="['/About']">About</a>
         </li>
         <li class="ms-4 me-4">
-          <a href="/Contact">Contact</a>
+          <a [routerLink]="['/Contact']">Contact</a>
         </li>
       </div>
     </ul>
@@ -52,15 +52,15 @@
   "
 >
   <li>
-    <a href="/Home">Home</a>
+    <a [routerLink]="['/Home']">Home</a>
   </li>
   <li>
-    <a href="/Portfolio">Portfolio</a>
+    <a [routerLink]="['/Portfolio']">Portfolio</a>
   </li>
   <li>
-    <a href="/About">About</a>
+    <a [routerLink]="['/About']" >About</a>
   </li>
   <li>
-    <a href="/Contact">Contact</a>
+    <a [routerLink]="['/Contact']">Contact</a>
   </li>
 </ul>
