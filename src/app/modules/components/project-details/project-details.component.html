@@ -9,8 +9,8 @@
       <a class="my-2 visitWebsiteButton mb-4" [href]="[portfolioData.url]">
         Visit The Website
       </a>
-      <figure class="mb-0" id="bigImageContainer">
-        <img src="{{portfolioData.img}}" alt="Project image" />
+      <figure class="mb-0 bg-white" id="bigImageContainer">
+        <img src="{{ portfolioData.img }}" alt="Project image"/>
       </figure>
     </div>
     <div class="bg-light-purple p-3 my-5" id="descriptionArea">
@@ -41,11 +41,11 @@
           class="descriptionAreaContent"
           [ngClass]="
             activeContentArea == 'About'
-              ? 'selectedContent'
+              ? 'leftSelectedContent'
               : selectedContentArea[0].appearanceDirection
           "
         >
-          <p class="text-white mb-1">Description</p>
+          <p class="text-white mb-1">Description:</p>
           <p class="text-white ms-2">
             {{ portfolioData.description }}
           </p>
@@ -54,21 +54,19 @@
           class="descriptionAreaContent"
           [ngClass]="
             activeContentArea == 'Technologies'
-              ? 'selectedContent'
+              ? 'rightSelectedContent'
               : selectedContentArea[1].appearanceDirection
           "
         >
           <p class="text-white mb-1">Technologies:</p>
-          <ul
-            class="d-flex flex-wrap justify-content-start align-items-center"
-          >
+          <ul class="d-flex flex-wrap align-items-center" id="technologyWrapper">
             <li
               class="imagePreview"
               *ngFor="let technology of portfolioData.technologies"
             >
               <figure
                 class="mb-0 logoContainer"
-                matTooltip="{{technology}}"
+                matTooltip="{{ technology }}"
                 matTooltipPosition="below"
               >
                 <img
