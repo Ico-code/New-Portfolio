@@ -63,28 +63,26 @@ ul {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   width: 100%;
   min-height: 50vh;
 }
 .descriptionAreaContent {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  min-width: 100%;
   overflow: hidden;
   transition: 0.5s ease;
 }
-.selectedContent {
-  transform: translate(0%);
+.leftSelectedContent {
+  transform: translate(50%);
+}
+.rightSelectedContent {
+  transform: translate(-50%);
 }
 .rightNotSelectedContent {
-  transform: translate(100%);
+  transform: translate(50%);
 }
 .leftNotSelectedContent {
-  transform: translate(-100%);
+  transform: translate(-50%);
 }
 .technologyLogos {
   max-width: 100%;
@@ -101,4 +99,12 @@ ul {
 }
 .logoContainer:hover {
   background-color: white;
+}
+#technologyWrapper {
+  justify-content: start;
+}
+@media only screen and (max-width:700px) {
+  #technologyWrapper {
+    justify-content: center;
+  }
 }
