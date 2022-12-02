@@ -97,4 +97,23 @@ export var portfolioItems: Array<portfolioInterface> = [
     description:
       'This project was started to learn more about HTML forms and tables. This project contains both a HTML table and a form built using angular ad bootstrap. This form allows you to add data to the table next to it.',
   },
+  {
+    id: 6,
+    img: 'assets/images/website-pictures/Snowfall.PNG',
+    title: 'Snowfall',
+    shortdescription: 'a Project for playing around with position absolute',
+    date: '2 December 2022',
+    url: 'https://ico-code.github.io/Snowfall/',
+    technologies: [
+      'Angular',
+      'Bootstrap',
+      'CSS',
+      'Git',
+      'HTML',
+      'JSON',
+      'Typescript',
+    ],
+    description:
+      'This project was started from an idea to create a website with snow raining around the website. The snow raining from the top of the screen moves around the screen using position:absolute, by changing the values of top and left which in app are called locationX for left, and locationY for top.',
+  },
 ];

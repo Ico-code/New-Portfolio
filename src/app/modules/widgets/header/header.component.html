@@ -7,9 +7,7 @@
             [routerLink]="['/Home']"
             class="d-flex justify-content-center align-items-center"
           >
-            <img
-              src="assets/images/other/Logo.PNG"
-              alt="Logo"
+            <img src="assets/images/other/Logo.PNG" alt="Logo"
           /></a>
         </figure>
       </li>
@@ -52,15 +50,15 @@
   "
 >
   <li>
-    <a [routerLink]="['/Home']">Home</a>
+    <a [routerLink]="['/Home']" (click)="toggleMenu()">Home</a>
   </li>
   <li>
-    <a [routerLink]="['/Portfolio']">Portfolio</a>
+    <a [routerLink]="['/Portfolio']" (click)="toggleMenu()">Portfolio</a>
   </li>
   <li>
-    <a [routerLink]="['/About']" >About</a>
+    <a [routerLink]="['/About']" (click)="toggleMenu()">About</a>
   </li>
   <li>
-    <a [routerLink]="['/Contact']">Contact</a>
+    <a [routerLink]="['/Contact']" (click)="toggleMenu()">Contact</a>
   </li>
 </ul>
