@@ -6,8 +6,10 @@
         {{ portfolioData.shortdescription }}
       </p>
       <p class="mb-3 text-white p-1">Date: {{ portfolioData.date }}</p>
-      <a class="my-2 visitWebsiteButton mb-4" [href]="[portfolioData.url]">
-        Visit The Website
+      <a [href]="[portfolioData.url]">
+        <button class="my-2 visitWebsiteButton mb-4">
+          Visit The Website
+        </button>
       </a>
       <figure class="mb-0 bg-white" id="bigImageContainer">
         <img src="{{ portfolioData.img }}" alt="Project image"/>

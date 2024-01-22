@@ -1,41 +1,49 @@
 <section id="AboutMe" class="bg-purple px-3">
   <div class="contentContainer py-5">
     <div class="row">
-      <div class="col-md-6 d-flex flex-column justify-content-center mb-4">
+      <div class="col-md-6 d-flex flex-column justify-content-center mb-4 p-4">
         <h2 class="d-block text-white">About Me</h2>
         <p class="text-white">
-          I’m a Student studying at Laurea: University of applied sciences. I am
-          currently located in Vantaa, Finland and I have a serious passion for learning
-          more about UI effects, animations, and creating intuitive, dynamic
-          user experiences.
+          Greetings! I am a dedicated student enrolled at Laurea University of
+          Applied Sciences, situated in the city of Vantaa, Finland. In my
+          portfolio, you will discover a showcase of my endeavors, reflecting my
+          enthusiasm for creating seamless and engaging user interactions.
         </p>
-        <a [routerLink]="['/About']" class="learnMoreButton p-2">Learn more</a>
+        <a [routerLink]="['/About']">
+          <button class="learnMoreButton learnMoreButton-secondary-color px-2">
+            Learn more
+          </button>
+        </a>
       </div>
       <div
         class="col-md-6 d-flex flex-column justify-content-center align-items-center"
       >
-        <figure>
-          <img src="assets/images/other/me.jpeg" alt="idk" />
+        <figure class="imageBox">
+          <img src="assets/images/other/drink-book-candle.jpg" alt="idk" />
         </figure>
       </div>
     </div>
   </div>
 </section>
 <div>
-  <section id="Portfolio" class="p-4 bg-blue">
+  <section id="Portfolio" class="p-4 bg-yellow">
     <div class="contentContainer">
       <h2 class="text-white">Portfolio</h2>
       <p class="text-white">
         This part of the page includes some of my favorite projects, from my
         portfolio.
       </p>
-      <a [routerLink]="['/Portfolio']" class="learnMoreButton p-2">Learn more</a>
+      <a [routerLink]="['/Portfolio']">
+        <button class="learnMoreButton learnMoreButton-main-color px-2">
+          Learn more
+        </button>
+      </a>
       <app-portfolio-list
         [portfolioItems]="portfolioItems"
       ></app-portfolio-list>
     </div>
   </section>
-  <section id="ContactForm" class="p-4 bg-purple">
+  <section id="ContactForm" class="px-4 py-5 bg-purple">
     <div class="contentContainer">
       <h2 class="text-white">Contact me</h2>
       <p class="text-white">

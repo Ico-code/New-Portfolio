@@ -10,14 +10,15 @@ p {
 }
 .containerForFloatingText {
   border-radius: 10px;
+  border: 3px solid black;
   display: flex;
   justify-content: center;
   align-items: baseline;
   overflow: hidden;
   position: relative;
   background-color: white;
-  max-height: 200px;
-  min-height: 200px;
+  max-height: 300px;
+  min-height: 300px;
 }
 .lightgreyText {
   color: rgb(184, 184, 184);
@@ -35,26 +36,14 @@ p {
   padding: 10px;
   transition: 0.2s ease;
   transform: translate(0%, 100%);
+  border: 3px ridge var(--main-yellow);
+  border-radius: 5px;
 }
 .portfolioItem:hover > a > figure.containerForFloatingText > img {
-  max-width: 110%;
+  max-width: 103%;
 }
 .portfolioItem:hover > a > figure > .floatingText {
   transform: translate(0%);
-}
-@media only screen and (min-width:600px) {
-  .containerForFloatingText {
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    overflow: hidden;
-    position: relative;
-    background-color: white;
-    max-height: 200px;
-    min-height: 200px;
-  }
-
 }
 @media only screen and (max-width:768px) {
   .containerForFloatingText {

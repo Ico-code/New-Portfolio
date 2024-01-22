@@ -17,6 +17,7 @@ figure.myPicture {
   max-width: 100%;
   background-color: white;
   max-height: 550px;
+  max-width: 500px;
 }
 figure.skillLogo {
   padding: 10px;
@@ -30,9 +31,6 @@ figure.skillLogo {
 }
 figure.skillLogo img {
   max-width: 50%;
-}
-figure.myPicture img {
-  max-width: 500px;
 }
 img {
   max-width: 100%;

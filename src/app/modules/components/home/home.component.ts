@@ -10,7 +10,7 @@ import { PortfolioService } from '../../services/portfolioService/portfolio-serv
 export class HomeComponent implements OnInit {
 
   portfolioItems?: Array<portfolioInterface> =
-    this.portfolioService.getMultiplePortfolioItems([0,1,2,5]);
+    this.portfolioService.getMultiplePortfolioItems([0,6,1,5]);
 
   constructor(private portfolioService: PortfolioService) {}
 

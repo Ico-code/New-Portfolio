@@ -8,18 +8,18 @@ import { portfolioItems } from './portfolioItems';
 
 export class PortfolioService {
 
-  portfolioItems:Array<portfolioInterface> = portfolioItems;
+  portfolioItemsList:Array<portfolioInterface> = portfolioItems;
 
   getMultiplePortfolioItems(ids:Array<number>){
     let arrays:Array<portfolioInterface> = [];
     ids.forEach(id => {
-      arrays.push(this.portfolioItems[id])
+      arrays.push(this.portfolioItemsList[id])
     });
     return arrays;
   }
 
   getPortfolioItem (id:number) {
-    return this.portfolioItems[id]
+    return this.portfolioItemsList[id]
   }
 
   getAllPortfolioItems () {
