@@ -116,4 +116,38 @@ export var portfolioItems: Array<portfolioInterface> = [
     description:
       'This project was started from an idea to create a website with snow raining around the website. The snow raining from the top of the screen moves around the screen using position:absolute, by changing the values of top and left which in app are called locationX for left, and locationY for top.',
   },
+  {
+    id: 7,
+    img: 'assets/images/website-pictures/ToDoList.PNG',
+    title: 'ToDo-List',
+    shortdescription: 's school project where i made a todo-list app',
+    date: '30 October 2023',
+    url: 'https://todo-list-project1-nv.netlify.app/',
+    technologies: [
+      'CSS',
+      'Git',
+      'HTML',
+      'JSON',
+      'Javascript',
+    ],
+    description:
+      'This project was started from an idea to create a website with snow raining around the website. The snow raining from the top of the screen moves around the screen using position:absolute, by changing the values of top and left which in app are called locationX for left, and locationY for top.',
+  },
+  {
+    id: 8,
+    img: 'assets/images/website-pictures/AstroPictures.PNG',
+    title: 'Astronomy-daily',
+    shortdescription: 'a Project for getting APOT pictures from nasas api',
+    date: '12 December 2023',
+    url: 'https://main--sunny-dieffenbachia-46c559.netlify.app/',
+    technologies: [
+      'CSS',
+      'Git',
+      'HTML',
+      'JSON',
+      'Javascript',
+    ],
+    description:
+      'This project was started from an idea to create a website with snow raining around the website. The snow raining from the top of the screen moves around the screen using position:absolute, by changing the values of top and left which in app are called locationX for left, and locationY for top.',
+  },
 ];
